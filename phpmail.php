@@ -13,7 +13,7 @@ try {
     $mail->SMTPDebug = 2;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     // $mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
-    $mail->Host = 'smtp.mailtrap.io';
+    $mail->Host = 'tls://smtp.mailtrap.io';
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = '0acc30783874d8';                 // SMTP username
     $mail->Password = '878122d26faeb0';                           // SMTP password
@@ -25,7 +25,8 @@ try {
     //Recipients
     $mail->setFrom('a.spokauskas@outlook.com', 'Mailer');
     $mail->addAddress('alspok@gmail.com', 'ASpok');     // Add a recipient Name is optional
-    $mail->addAddress('a.spokauskas@outlook.com', 'AS');
+    // $mail->addAddress('a.spokauskas@outlook.com', 'AS');
+    $mail->addAddress('test-cn7a4@mail-tester.com');
     // $mail->addAddress('ellen@example.com');
     // $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');
