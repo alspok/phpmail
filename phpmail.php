@@ -10,10 +10,11 @@ require 'C:\wamp\www\alspok\vendor\autoload.php';
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
     //Server settings
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 2;                                // Enable verbose debug output
+    $mail->Debugoutput = 'html';
     $mail->isSMTP();                                      // Set mailer to use SMTP
     // $mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
-    $mail->Host = 'tls://smtp.mailtrap.io';
+    $mail->Host = 'smtp.mailtrap.io';
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = '0acc30783874d8';                 // SMTP username
     $mail->Password = '878122d26faeb0';                           // SMTP password
@@ -24,9 +25,9 @@ try {
 
     //Recipients
     $mail->setFrom('a.spokauskas@outlook.com', 'Mailer');
-    $mail->addAddress('alspok@gmail.com', 'ASpok');     // Add a recipient Name is optional
+    // $mail->addAddress('alspok@gmail.com', 'ASpok');     // Add a recipient Name is optional
     // $mail->addAddress('a.spokauskas@outlook.com', 'AS');
-    $mail->addAddress('test-cn7a4@mail-tester.com');
+    $mail->addAddress('test-sm35o@mail-tester.com');
     // $mail->addAddress('ellen@example.com');
     // $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');
@@ -38,7 +39,7 @@ try {
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Here is the subject';
+    $mail->Subject = 'New subject';
     $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
