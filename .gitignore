@@ -1,0 +1,2 @@
+# Ignore phpmailer vendor folder
+vendor/
