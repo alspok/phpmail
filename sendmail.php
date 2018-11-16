@@ -2,7 +2,7 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-require 'C:\wamp\www\alspok\vendor\autoload.php';
+require_once 'C:\wamp64\www\alspok\phpmail\vendor\autoload.php';
 
 function sendMail($email, $subject, $message){
 
@@ -19,7 +19,7 @@ $mail = new PHPMailer(true);
         $mail->Port = 25;
 
         /**************Recipients************************/
-        $mail->setFrom('a.spokauskas@outlook.com', 'Mailer');
+        $mail->setFrom('mailer@mailer.com', 'Mailer');
         $mail->addAddress($email);
         // $mail->addAddress('test-sm35o@mail-tester.com');
 

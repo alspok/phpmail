@@ -1,5 +1,5 @@
 <?php
-    require('sendmail.php');
+    require_once('sendmail.php');
 
     echo "<form method='post' action=''>";
     echo "<table>";
