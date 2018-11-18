@@ -7,13 +7,14 @@ function emailCollection(){
     $conn = $connection->mySqlConn();
 
     $tblName = 'tbl_logreg';
-    $queryString = 'SELECT * FROM ' . $tblName;
+    $queryString = 'SELECT email FROM ' . $tblName;
     $stmt = $conn->prepare($queryString);
     $stmt->execute();
     $result = $stmt->get_result();
+    $stmt->close();
     
     while($row = $result->fetch_assoc()){
-        $emailArray[] = $row['email'];
+        $emailArray[] = $row;
     }
 
     return $emailArray;
@@ -29,6 +30,7 @@ function textCollection(){
     $stmt = $conn->prepare($queryString);
     $stmt->execute();
     $result = $stmt->get_result();
+    $stmt->close();
 
     while($row = $result->fetch_array(MYSQLI_NUM)){
         $textArray[] = $row;
