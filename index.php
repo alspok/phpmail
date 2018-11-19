@@ -20,7 +20,7 @@
 
     /********* A bunch of messages, one text ********/
     echo "<br><h2>A bunch of messages, one text.</h2>";
-    echo "<form method='post'><input type='submit' name='runbunch' value='Run script'></form>";
+    echo "<form method='post'><input type='submit' name='runbunch' value='Send mail'></form>";
     if(isset($_POST['runbunch'])){
         $emailArray = emailCollection();
         $subject = 'Some subject';
@@ -33,7 +33,7 @@
 
     /********* A bunch of message with text from DB.**********/
     echo "<br><h2>Message with text from DB.</h2>";
-    echo "<form method='post'><input type='submit' name='rundb' value='Run script'></form>";
+    echo "<form method='post'><input type='submit' name='rundb' value='Send mail'></form>";
     if(isset($_POST['rundb'])){
         $emailArray = emailCollection();
         $textArray = textCollection();
