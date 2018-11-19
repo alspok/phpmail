@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 19, 2018 at 11:12 AM
+-- Generation Time: Nov 19, 2018 at 11:11 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_maistas`
+-- Database: `db_alspok`
 --
 
 -- --------------------------------------------------------

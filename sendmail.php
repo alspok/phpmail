@@ -2,8 +2,8 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-// require_once 'C:\wamp64\www\alspok\phpmail\vendor\autoload.php';
-require_once 'C:\wamp\www\alspok\PHPMail\vendor\autoload.php';
+require_once 'C:\wamp64\www\alspok\phpmail\vendor\autoload.php';
+//require_once 'C:\wamp\www\alspok\PHPMail\vendor\autoload.php';
 
 function sendMail($email, $subject, $message){
 
