@@ -15,6 +15,7 @@
 
     if(isset($_POST['submit'])){
         sendMail($_POST['email'], $_POST['subject'], $_POST['message'], $_POST['message']);
+        echo nl2br(PHP_EOL . $_POST['email'] . PHP_EOL . $_POST['subject'] . PHP_EOL . $_POST['message']);
     }
 
     /********* A bunch of messages, one text ********/
@@ -26,7 +27,7 @@
         $message = 'Some message text';
         foreach($emailArray as $emailItem){
             sendMail($emailItem[3], $subject, $message);
-            echo $emailItem[3] . '<br>';
+            echo nl2br($emailItem[3] . PHP_EOL);
         }
     }
 
@@ -40,6 +41,6 @@
         $outString = arrayToString($textArray);
         foreach($emailArray as $emailItem){
             sendMail($emailItem[3], $subject, $outString);
-            echo nl2br($emailItem[3] . '<br>' . $outString . '<br>');
+            echo nl2br($emailItem[3] . PHP_EOL . $outString . PHP_EOL);
         }
     }
