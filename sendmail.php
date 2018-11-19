@@ -29,9 +29,9 @@ $mail = new PHPMailer(true);
         $mail->Port = 25;
 
         */
-        
+
         /**************Recipients************************/
-        $mail->setFrom('mailer@mailer.com', 'Mailer');
+        $mail->setFrom('alspok@gmail.com', 'Mailer');
         $mail->addAddress($email);
         // $mail->addAddress('test-sm35o@mail-tester.com');
 
