@@ -24,9 +24,9 @@
         $emailArray = emailCollection();
         $subject = 'Some subject';
         $message = 'Some message text';
-        foreach($emailArray as $item){
-            sendMail($item, $subject, $message);
-            echo $item . '<br>';
+        foreach($emailArray as $emailItem){
+            sendMail($emailItem[3], $subject, $message);
+            echo $emailItem[3] . '<br>';
         }
     }
 
@@ -39,7 +39,7 @@
         $subject = 'Some subject';
         $outString = arrayToString($textArray);
         foreach($emailArray as $emailItem){
-            sendMail($emailItem, $subject, $outString);
-            echo $emailItem . '<br>' . $outString . '<br>';
+            sendMail($emailItem[3], $subject, $outString);
+            echo nl2br($emailItem[3] . '<br>' . $outString . '<br>');
         }
     }
