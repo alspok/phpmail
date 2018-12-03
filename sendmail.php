@@ -2,7 +2,7 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-require_once 'C:\wamp64\www\alspok\phpmail\vendor\autoload.php';
+require_once 'C:\wamp\www\alspok\phpmail\vendor\autoload.php';
 //require_once 'C:\wamp\www\alspok\PHPMail\vendor\autoload.php';
 
 function sendMail($email, $subject, $message){
@@ -10,16 +10,15 @@ function sendMail($email, $subject, $message){
 $mail = new PHPMailer(true);
     try {
         /************ Mailjet server settings *******************/
-        $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = 'in-v3.mailjet.com';
-        $mail->SMTPAuth = true;                               // Enable SMTP authentication
-        $mail->Username = 'df2ee78039fcb7d5c5b332199b3fcca7';                 // SMTP username
-        $mail->Password = '423eb0c14782cabdf8f5c08a352e5cf1';                 // SMTP password
-        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-        $mail->Port = 25;
+        // $mail->isSMTP();                                      // Set mailer to use SMTP
+        // $mail->Host = 'in-v3.mailjet.com';
+        // $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        // $mail->Username = 'df2ee78039fcb7d5c5b332199b3fcca7';                 // SMTP username
+        // $mail->Password = '423eb0c14782cabdf8f5c08a352e5cf1';                 // SMTP password
+        // $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+        // $mail->Port = 25;
 
-        /*************Mailtrap Server settings*******************
-        // $mail->SMTPDebug = 2;                                // Enable verbose debug output
+        /*************Mailtrap Server settings*******************/
         $mail->isSMTP();                                      // Set mailer to use SMTP
         $mail->Host = 'smtp.mailtrap.io';
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -27,8 +26,6 @@ $mail = new PHPMailer(true);
         $mail->Password = '878122d26faeb0';                           // SMTP password
         $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
         $mail->Port = 25;
-
-        */
 
         /**************Recipients************************/
         $mail->setFrom('alspok@gmail.com', 'Mailer');

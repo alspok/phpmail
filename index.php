@@ -1,7 +1,6 @@
 <?php
     require_once('sendmail.php');
     require_once('mysqlfunctions.php');
-
     /********* Single message ***********/
     echo "<h2>Single message.</h2><br>";
     echo "<form method='post' action=''>";
