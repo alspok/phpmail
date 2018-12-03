@@ -15,7 +15,7 @@
                 // "/var/www/html": "c:/wamp/www/alspok/phpMail",
                 // "/phpmail": "${workspaceRoot}/phpmail"
               },
-            "port": 9090
+            "port": 9000
         },
         {
             "name": "Launch currently open script",
